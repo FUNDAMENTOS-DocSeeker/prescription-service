@@ -41,8 +41,8 @@ public class PrescriptionRecordController {
     }
 
     @PostMapping("")
-    public PrescriptionRecordResource save(@RequestBody CreatePrescriptionRecordResource resource) {
-        return mapper.toResource(prescriptionRecordService.save(mapper.toModel(resource)));
+    public ResponseEntity<PrescriptionRecordResource> save(@RequestBody CreatePrescriptionRecordResource resource) {
+        return ResponseEntity.ok(mapper.toResource(prescriptionRecordService.save(mapper.toModel(resource))));
     }
 
     @PutMapping("{id}")
