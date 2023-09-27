@@ -1,5 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
 server:
-  port: 8080
+  port: 8086
 logging:
   level:
     org:
@@ -7,12 +11,14 @@ logging:
         SQL: DEBUG
         type: TRACE
 spring:
+  application:
+    name: prescription-service
   datasource:
     driver-class-name: org.postgresql.Driver
     #    JDBC : SGDB :// HOST : PORT / DB
-    url: jdbc:postgresql://localhost:5432/prescription
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/prescriptions
+    username: postgres
+    password: admin
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
