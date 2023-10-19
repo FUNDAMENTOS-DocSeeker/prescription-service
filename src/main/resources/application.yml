@@ -11,8 +11,8 @@ spring:
     driver-class-name: org.postgresql.Driver
     #    JDBC : SGDB :// HOST : PORT / DB
     url: jdbc:postgresql://localhost:5432/prescription
-    username:
-    password:
+    username: postgres
+    password: admin
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
