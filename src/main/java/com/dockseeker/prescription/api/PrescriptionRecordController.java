@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin()
-@RequestMapping("api/v1/prescription")
+@CrossOrigin
+@RequestMapping("api/v1/prescriptions")
 public class PrescriptionRecordController {
 
     private PrescriptionRecordService prescriptionRecordService;
